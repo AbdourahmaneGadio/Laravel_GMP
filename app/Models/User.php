@@ -7,8 +7,9 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Contracts\Auth\Authenticatable;
 
 /**
  * Class User
@@ -27,10 +28,13 @@ use Illuminate\Contracts\Auth\Authenticatable;
  * @property int $fk_role_id
  * 
  * @property Role $role
+ * @property Collection|Alternance[] $alternances
+ * @property Collection|Entreprise[] $entreprises
  *
  * @package App\Models
  */
-class User extends Model implements Authenticatable
+class User extends Authenticatable
+
 {
 	protected $table = 'users';
 	protected $primaryKey = 'user_id';
@@ -63,12 +67,17 @@ class User extends Model implements Authenticatable
 		return $this->belongsTo(Role::class, 'fk_role_id');
 	}
 
-	 /**
-     * Get the name of the unique identifier for the user.
-     *
-     * @return string
-     */
-    public function getAuthIdentifierName()
+	public function alternances()
+	{
+		return $this->hasMany(Alternance::class, 'fk_user_id');
+	}
+
+	public function entreprises()
+	{
+		return $this->hasMany(Entreprise::class, 'fk_entreprise_user_id');
+	}
+
+	public function getAuthIdentifierName()
     {
         return 'user_id';
     }

@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\AlternanceController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EntrepriseController;
+use Illuminate\Routing\RouteRegistrar;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,4 +76,17 @@ Route::get('/lp-mri', function () {
 
 Route::get('/lp-mie', function () {
     return view('licencesPro.lpMie');
+});
+
+Route::post('/alternance', [AlternanceController::class, 'store'])->name('alternance.store');
+
+
+Route::middleware('profil.entreprise')->group(function (){
+    Route::get('/profil/entreprise',[EntrepriseController::class, 'show']);
+
+    Route::post('profil/entreprise/edit', [EntrepriseController::class, 'store'])->name('entreprise.store');
+
+    Route::get('profil/entreprise/edit', function(){
+        return view('profile.entreprise.editentreprise');
+    });
 });

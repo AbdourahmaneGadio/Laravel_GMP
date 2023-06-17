@@ -17,7 +17,11 @@ return new class extends Migration
             $table->date('alternance_date_debut');
             $table->date('alternance_date_fin');
             $table->text('alternance_detail');
-            $table->foreignId('fk_user_id')->constrained('users', 'user_id');
+            $table->string('alternance_rue');
+            $table->integer('alternance_code_postal');
+            $table->string('alternance_ville');
+            $table->string('alternance_email');
+            $table->foreignId('fk_user_id')->nullable()->constrained('users', 'user_id');
         });
     }
 

@@ -56,7 +56,7 @@
                         </li>
                         @if(auth()->check() && auth()->user()->fk_role_id === 6)
                         <li>
-                            <a href="#" class="text-[#BC6C25] dark:text-white hover:underline">Entreprise</a>
+                            <a href="{{url('profil/entreprise')}}" class="text-[#BC6C25] dark:text-white hover:underline">Profil-Entreprise</a>
                         </li>
                         @else
                             
