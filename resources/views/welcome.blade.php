@@ -1,10 +1,10 @@
-@include('layouts.header')
-<div class="bg-[#283618] p-7 text-white text-2xl ">
-    Département GMP – Génie Mécanique et Productique
-</div>
-<nav class="bg-[#606C38] p-3 text-white text-lg border-white border-t-2 border-b-2 ">
-    ACCEUIL
-</nav>
+@extends('header')
+
+@section('title','GMP')
+
+@endsection
+
+@section('content')
 <section class="container p-7 mx-auto flex flex-row justify-between flex-wrap">
     <div class="w-1/2 mb-6">
         <h1 class="text-[#606C38] p-1">Présentation</h1>
@@ -27,4 +27,5 @@
 
     </div>
 </section>
+@endsection
 @include('layouts.footer')

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>GMP</title>
+        <title>@yield('title')</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -17,8 +17,9 @@
        
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
             <div class="flex flex-wrap justify-start items-center mx-auto max-w-screen-xl p-4">
-                    <img src="{{URL::asset('assets/images/logo/logo_iut_gmp.png')}}" class="h-20" alt="Logo" />
-                    @if (auth()->check())
+                <a href="" >  <img href="{{ url('/') }}" src="{{URL::asset('assets/images/logo/logo_iut_gmp.png')}}" class="h-20" alt="Logo" />
+                    @if (auth()->check()) </a>
+                  
                     <button href="{{ route('register') }}" type="button" data-dropdown-toggle="dropdownauth" data-modal-toggle="authentication-modal-entreprise" class="focus:outline-none text-white bg-[#283618] hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">{{ auth()->user()->user_name }}</button>
                     <x-dropdownauth/>
                     @else
@@ -47,6 +48,20 @@
                         <li>
                             <a href="#" class="text-[#BC6C25] dark:text-white hover:underline">VIE ÉTUDIANTE</a>
                         </li>
+                        <li>
+                            <a href="{{url('alternance')}}" class="text-[#BC6C25] dark:text-white hover:underline">OFFRE D'ALTERNANCE</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-[#BC6C25] dark:text-white hover:underline">OFFRE PROJET TUTORÉ </a>
+                        </li>
+                        @if(auth()->check() && auth()->user()->fk_role_id === 6)
+                        <li>
+                            <a href="#" class="text-[#BC6C25] dark:text-white hover:underline">Entreprise</a>
+                        </li>
+                        @else
+                            
+                        @endif
+                     
                     </ul>
                     </div>
                     <div>
@@ -59,4 +74,8 @@
         <div class="bg-[#283618] p-7 text-white text-2xl ">
             Département GMP – Génie Mécanique et Productique
         </div>
-        
+        <nav class="bg-[#606C38] p-3 text-white text-lg border-white border-t-2 border-b-2 ">
+            ACCEUIL
+        </nav>
+        @yield('content')
+        @include('layouts.footer')
