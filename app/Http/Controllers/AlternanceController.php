@@ -13,7 +13,7 @@ class AlternanceController extends Controller
     {   
         $user_id = auth()->id();
 
-        $entreprise = Entreprise::find($user_id);
+        $entreprise = Entreprise::where('fk_entreprise_user_id',$user_id)->first();
 
         if (auth()->check()){
             $request->validate([
@@ -22,15 +22,14 @@ class AlternanceController extends Controller
                 'alternance_detail' => 'required|string',
             ]);
         $alternance = new Alternance;
-        $alternance->alternance_nom = 'microsoft';
-       // $alternance->alternance_nom = $entreprise['entreprise_nom'];
+        $alternance->alternance_nom = $entreprise->entreprise_nom;
         $alternance->alternance_date_debut = $request->alternance_date_debut;
         $alternance->alternance_date_fin = $request->alternance_date_fin;
         $alternance->alternance_detail = $request->alternance_detail;
-        $alternance->alternance_rue = $request->alternance_rue;
-        $alternance->alternance_code_postal = $request->alternance_code_postal;
-        $alternance->alternance_ville = $request->alternance_ville;
-        $alternance->alternance_email = $request->alternance_email;
+        $alternance->alternance_rue = $entreprise->rue;
+        $alternance->alternance_code_postal = $entreprise->code_postal;
+        $alternance->alternance_ville = $entreprise->ville;
+        $alternance->alternance_email = $entreprise->email;
         $alternance->fk_user_id = $user_id;
 
         }else {

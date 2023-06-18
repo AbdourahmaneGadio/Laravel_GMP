@@ -3,7 +3,7 @@
 @section('content')
 
 
-<div class="container">
+<div class="container  m-3">
     <h1 class="text-center">Ajouter une offre d'alternance</h1>
 
     @if(auth()->check() && auth()->user()->fk_role_id === 6)
@@ -109,6 +109,6 @@
         <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded">Enregistrer</button>
     </form>
     @endif
-   
+</div>
     
 @endsection
