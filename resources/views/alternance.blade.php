@@ -6,7 +6,39 @@
 <div class="container">
     <h1 class="text-center">Ajouter une offre d'alternance</h1>
 
+    @if(auth()->check() && auth()->user()->fk_role_id === 6)
+    <form action="{{ route('alternance.store') }}" method="POST" class="max-w-md mx-auto">
+        @csrf
     
+    
+        <div class="mb-4">
+            <label for="alternance_date_debut" class="block mb-1">Date de début</label>
+            <input type="date" name="alternance_date_debut" id="alternance_date_debut" value="{{ old('alternance_date_debut') }}" required class="w-full px-3 py-2 border rounded">
+            @error('alternance_date_debut')
+                <span class="text-red-500">{{ $message }}</span>
+            @enderror
+        </div>
+    
+        <div class="mb-4">
+            <label for="alternance_date_fin" class="block mb-1">Date de fin</label>
+            <input type="date" name="alternance_date_fin" id="alternance_date_fin" value="{{ old('alternance_date_fin') }}" required class="w-full px-3 py-2 border rounded">
+            @error('alternance_date_fin')
+                <span class="text-red-500">{{ $message }}</span>
+            @enderror
+        </div>
+    
+        <div class="mb-4">
+            <label for="alternance_detail" class="block mb-1">Détails</label>
+            <textarea name="alternance_detail" id="alternance_detail" rows="4" required class="w-full px-3 py-2 border rounded">{{ old('alternance_detail') }}</textarea>
+            @error('alternance_detail')
+                <span class="text-red-500">{{ $message }}</span>
+            @enderror
+        </div>
+    
+    
+        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded">Enregistrer</button>
+    </form>
+    @else
     <form action="{{ route('alternance.store') }}" method="POST" class="max-w-md mx-auto">
         @csrf
     
@@ -76,5 +108,7 @@
     
         <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded">Enregistrer</button>
     </form>
+    @endif
+   
     
 @endsection

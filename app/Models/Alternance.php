@@ -21,6 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $alternance_code_postal
  * @property string $alternance_ville
  * @property string $alternance_email
+ * @property bool $confirmed
  * @property int|null $fk_user_id
  * 
  * @property User|null $user
@@ -37,6 +38,7 @@ class Alternance extends Model
 		'alternance_date_debut' => 'datetime',
 		'alternance_date_fin' => 'datetime',
 		'alternance_code_postal' => 'int',
+		'confirmed' => 'bool',
 		'fk_user_id' => 'int'
 	];
 
@@ -49,6 +51,7 @@ class Alternance extends Model
 		'alternance_code_postal',
 		'alternance_ville',
 		'alternance_email',
+		'confirmed',
 		'fk_user_id'
 	];
 

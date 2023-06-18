@@ -17,7 +17,7 @@
        
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
             <div class="flex flex-wrap justify-start items-center mx-auto max-w-screen-xl p-4">
-                <a href="" >  <img href="{{ url('/') }}" src="{{URL::asset('assets/images/logo/logo_iut_gmp.png')}}" class="h-20" alt="Logo" />
+                <a href="{{ url('/') }}" >  <img  src="{{URL::asset('assets/images/logo/logo_iut_gmp.png')}}" class="h-20" alt="Logo" />
                     @if (auth()->check()) </a>
                   
                     <button href="{{ route('register') }}" type="button" data-dropdown-toggle="dropdownauth" data-modal-toggle="authentication-modal-entreprise" class="focus:outline-none text-white bg-[#283618] hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">{{ auth()->user()->user_name }}</button>

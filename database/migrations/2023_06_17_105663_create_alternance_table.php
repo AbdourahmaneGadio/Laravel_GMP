@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('alternance_code_postal');
             $table->string('alternance_ville');
             $table->string('alternance_email');
+            $table->boolean('confirmed')->default(false);
             $table->foreignId('fk_user_id')->nullable()->constrained('users', 'user_id');
         });
     }

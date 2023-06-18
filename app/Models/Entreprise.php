@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $rue
  * @property int $code_postal
  * @property string $ville
+ * @property string $email
  * @property int|null $fk_entreprise_user_id
  * 
  * @property User|null $user
@@ -38,6 +39,7 @@ class Entreprise extends Model
 		'rue',
 		'code_postal',
 		'ville',
+		'email',
 		'fk_entreprise_user_id'
 	];
 

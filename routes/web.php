@@ -85,8 +85,6 @@ Route::middleware('profil.entreprise')->group(function (){
     Route::get('/profil/entreprise',[EntrepriseController::class, 'show']);
 
     Route::post('profil/entreprise/edit', [EntrepriseController::class, 'store'])->name('entreprise.store');
+    Route::get('profil/entreprise/edit', [EntrepriseController::class, 'showedit']);
 
-    Route::get('profil/entreprise/edit', function(){
-        return view('profile.entreprise.editentreprise');
-    });
 });

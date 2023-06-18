@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('rue');
             $table->integer('code_postal');
             $table->string('ville');
+            $table->string('email')->unique();
             $table->foreignId('fk_entreprise_user_id')->nullable()->constrained('users', 'user_id');
         });
     }
