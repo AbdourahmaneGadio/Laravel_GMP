@@ -47,7 +47,9 @@
           </li>
         </ul>
       </div>
-
+      <br><br>
+      <input type="text" name="matiere" id="matiere" placeholder="Matière*" required>
+ 
       <br><br>
 
       <label for="pdf">Fichier PDF :</label>
