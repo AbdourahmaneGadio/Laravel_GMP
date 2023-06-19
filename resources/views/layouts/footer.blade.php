@@ -45,29 +45,28 @@
             </div>
 
             <div class="mt-3"> <a href="{{ url('/') }}">
-                    <span>Université d’Evry Val d’Essonne</span></a></div>
+                    <span>IUT</span></a></div>
 
 
             <div class="mt-3"> <a href="{{ url('/') }}">
-                    <span>Présentation de l’IUT</span></a>
+                    <span>FORMATION</span></a>
             </div>
 
             <div class="mt-3"> <a href="{{ url('/') }}">
-                    <span>Liste des B.U.T</span></a></div>
+                    <span>ESPACE ENTREPRISE</span></a></div>
 
 
-            <div class="mt-3"> <a href="{{ url('/licencesPro') }}">
-                    <span>Liste des Licences Professionnelles</span></a></div>
+            <div class="mt-3"> <a href="{{ url('/') }}">
+                    <span>ESPACE ENSEIGNANT</span></a></div>
 
             <div class="mt-3">
                 <a href="{{ url('/') }}">
 
-                    <span>Scolarité – Infos pratiques</span></a>
+                    <span>ESPACE ÉTUDIANT</span></a>
             </div>
 
 
-            <div class="mt-3"> <a href="{{ url('/') }}">
-                    <span>Vie étudiante</span></a></div>
+            
         </div>
         <!-- Navigation -->
 
@@ -75,7 +74,7 @@
         <!-- Logo URL:asset('assets/images/logo/logo_gmp.png') -->
 
         <div>
-            <img src="{{URL::asset('assets/images/logo/logo_gmp_blanc.png')}}" alt="Logo GMP" srcset="" class="h-20">
+            <img src="{{URL::asset('assets/images/logo/Logo_white.png')}}" alt="Logo GMP" srcset="" class="logo_footer">
         </div>
         <!-- Logo -->
 
@@ -103,3 +102,11 @@
 
 </footer>
 <!-- Footer -->
+
+<!-- Taille logo -->
+<style>
+    .logo_footer {
+        height: 200px; /* Ajuste la valeur pour augmenter ou réduire la taille du logo */
+    }
+</style>
+<!-- Taille logo -->
