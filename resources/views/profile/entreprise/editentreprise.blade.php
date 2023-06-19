@@ -3,7 +3,7 @@
 @section('content')
 
 
-<div class="container m-3">
+<div class="Ajoutoffre">
     <form action="{{ route('entreprise.store') }}" method="POST" class="max-w-md mx-auto">
         @csrf
 
@@ -39,9 +39,56 @@
         </div>
 
         <div class="flex justify-end">
-            <button type="submit" class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">Enregistrer</button>
+        <input type="submit" value="Enregistrer">
         </div>
     </form>
 </div>
+<style>
+/*FORM*/ 
+    .Ajoutoffre {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+  }
 
+  .Ajoutoffre h2 {
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .Ajoutoffre label {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .Ajoutoffre input[type="text"],
+  .Ajoutoffre input[type="number"],
+  .Ajoutoffre textarea {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .Ajoutoffre input[type="submit"] {
+    background-color: #606C38;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .Ajoutoffre input[type="submit"]:hover {
+    background-color: #BC6C25;
+  }
+/*FIN FORM*/ 
+</style>
 @endsection
