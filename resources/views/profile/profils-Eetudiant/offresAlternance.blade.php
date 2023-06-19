@@ -18,9 +18,11 @@
             <li>Mes Notes </li>
             <li> Mon emploi de temps </li>
             <li>Mes projets tutorés </li>
-            <li style="background:white; color:#606c38;"> Les offres d'Aletrnance</li>
+            <li style="background:white; color:#606c38;"> Les offres d'Alternance</li>
             <li>Mes candidature</li>
         </ul>
+
+        
 
 
 
