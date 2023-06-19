@@ -112,9 +112,8 @@
         <div class="bg-[#283618] p-7 text-white text-2xl ">
             Département GMP – Génie Mécanique et Productique
         </div>
-        <nav class="bg-[#606C38] p-3 text-white text-lg border-white border-t-2 border-b-2 ">
-            ACCEUIL
-        </nav>
+        
+     
         @yield('content')
         @include('layouts.footer')
 
