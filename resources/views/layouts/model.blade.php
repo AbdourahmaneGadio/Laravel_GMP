@@ -32,45 +32,83 @@
 
        
         <nav class="bg-gray-50 dark:bg-gray-700">
-            <div class="max-w-screen-xl px-4 py-3 mx-auto">
-                <div class="flex items-center justify-between">
-                    <div>
-                    <ul class="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
-                        <li>
-                            <a href="{{url('gmp')}}" class="text-[#606C38] dark:text-white hover:underline" aria-current="page">IUT</a>
-                        </li>
-                        <li>
-                            <a href="{{url('formation')}}" class="text-[#BC6C25] dark:text-white hover:underline">FORMATION</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-[#BC6C25] dark:text-white hover:underline">SCOLARITÉ</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-[#BC6C25] dark:text-white hover:underline">VIE ÉTUDIANTE</a>
-                        </li>
-                        <li>
-                            <a href="{{url('alternance')}}" class="text-[#BC6C25] dark:text-white hover:underline">OFFRE D'ALTERNANCE</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-[#BC6C25] dark:text-white hover:underline">OFFRE PROJET TUTORÉ </a>
-                        </li>
-                        @if(auth()->check() && auth()->user()->fk_role_id === 6)
-                        <li>
-                            <a href="{{url('profil/entreprise')}}" class="text-[#BC6C25] dark:text-white hover:underline">Profil-Entreprise</a>
-                        </li>
-                        @else
-                            
-                        @endif
-                     
-                    </ul>
-                    </div>
-                    <div>
-                        <x-zondicon-search  class="text-[#BC6C25] w-5"/>
-                    </div>
-                </div>
-                
+    <div class="max-w-screen-xl px-4 py-3 mx-auto">
+        <div class="flex items-center justify-between">
+            <div>
+                <ul class="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
+                    <li>
+                        <a href="{{url('gmp')}}" class="text-[#606C38] dark:text-white hover:underline" aria-current="page">IUT</a>
+                    </li>
+                    <li>
+                        <a href="{{url('licencesPro')}}" class="text-[#BC6C25] dark:text-white hover:underline">FORMATION</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="{{url('but_gmp')}}" class="text-[#BC6C25] dark:text-white hover:underline">BUT GMP</a>
+                            </li>
+                            <li>
+                                <a href="{{url('lp_mie')}}" class="text-[#BC6C25] dark:text-white hover:underline">LP MIE</a>
+                            </li>
+                            <li>
+                                <a href="{{url('lp_mief')}}" class="text-[#BC6C25] dark:text-white hover:underline">LP MIEF</a>
+                            </li>
+                            <li>
+                                <a href="{{url('lp_mri')}}" class="text-[#BC6C25] dark:text-white hover:underline">LP MRI</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#BC6C25] dark:text-white hover:underline">ESPACE ENTREPRISE</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="{{url('projet_tutore')}}" class="text-[#BC6C25] dark:text-white hover:underline">Projet tutoré</a>
+                            </li>
+                            <li>
+                                <a href="{{url('offres_alternance')}}" class="text-[#BC6C25] dark:text-white hover:underline">Offres d'alternance</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#BC6C25] dark:text-white hover:underline">ESPACE ENSEIGNANT</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="{{url('notes')}}" class="text-[#BC6C25] dark:text-white hover:underline">Notes</a>
+                            </li>
+                            <li>
+                                <a href="{{url('emploi_temps')}}" class="text-[#BC6C25] dark:text-white hover:underline">Emploi du temps</a>
+                            </li>
+                            <li>
+                                <a href="{{url('support_cours')}}" class="text-[#BC6C25] dark:text-white hover:underline">Support de cours</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#BC6C25] dark:text-white hover:underline">ESPACE ÉTUDIANT</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="{{url('notes')}}" class="text-[#BC6C25] dark:text-white hover:underline">Notes</a>
+                            </li>
+                            <li>
+                                <a href="{{url('emploi_temps')}}" class="text-[#BC6C25] dark:text-white hover:underline">Emploi du temps</a>
+                            </li>
+                            <li>
+                                <a href="{{url('candidatures')}}" class="text-[#BC6C25] dark:text-white hover:underline">Candidatures</a>
+                            </li>
+                            <li>
+                                <a href="{{url('projet_tutore')}}" class="text-[#BC6C25] dark:text-white hover:underline">Projet tutorés</a>
+                            </li>
+                            <li>
+                                <a href="{{url('offres_alternance')}}" class="text-[#BC6C25] dark:text-white hover:underline">Offres d'alternance</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </nav>
+            <div>
+                <x-zondicon-search  class="text-[#BC6C25] w-5"/>
+            </div>
+        </div>
+    </div>
+</nav>
         <div class="bg-[#283618] p-7 text-white text-2xl ">
             Département GMP – Génie Mécanique et Productique
         </div>
@@ -79,3 +117,21 @@
         </nav>
         @yield('content')
         @include('layouts.footer')
+
+
+<style>
+/* Style pour les sous-menus */
+.sub-menu {
+  display: none; /* Cacher les sous-menus par défaut */
+  position: absolute;
+  background-color: #fff; /* Couleur de fond des sous-menus */
+  padding: 8px;
+  min-width: 150px;
+  z-index: 1;
+}
+
+/* Afficher les sous-menus lors du survol */
+li:hover .sub-menu {
+  display: block;
+}
+</style>        
