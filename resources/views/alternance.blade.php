@@ -2,7 +2,7 @@
 @section('title','Offre d\'alternance')
 @section('content')
 
-
+@include('layouts.sidebarEntre')
 <div class="container  m-3">
     <h1 class="text-center">Ajouter une offre d'alternance</h1>
 
