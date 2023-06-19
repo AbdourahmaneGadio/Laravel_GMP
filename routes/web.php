@@ -26,9 +26,8 @@ Route::get('/formation', function () {
     return view('licencesPro.lpMie');
 });
 
-Route::get('/alternance', function (){
-    return view('alternance');
-});
+
+
 
 Route::get('/gmp', function () {
     return view('departementGMP');
@@ -93,7 +92,15 @@ Route::get('/lp-mie', function () {
 
 Route::post('/alternance', [AlternanceController::class, 'store'])->name('alternance.store');
 
+Route::get('/alternance', function (){
+    return view('alternance');
+});
+
 Route::post('/projet', [projetController::class, 'store'])->name('projet.store');
+
+Route::get('/projet', function (){
+    return view('alternance');
+});
 
 
 
