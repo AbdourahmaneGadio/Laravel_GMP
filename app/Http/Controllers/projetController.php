@@ -18,30 +18,31 @@ class projetController extends Controller
     {
         $user_id = auth()->id();
 
-        $entreprise = Entreprise::where('fk_projet_user_id', $user_id)->first();
+        $entreprise = Entreprise::where('fk_entreprise_user_id', $user_id)->first();
 
 
 
         if (auth()->check()) {
             $request->validate([
-                'projet_nom' => 'required|date',
-                'detail' => 'required|date',
+                'projet_nom' => 'required|string',
+                'detail' => 'required|string',
                 // 'alternance_detail' => 'required|string',
             ]);
             $projet = new Projet;
             $projet->projet_nom = $entreprise->entreprise_nom;
             $projet->detail = $request->detail;
             $projet->updated_at = $request->alternance_detail;
-            $projet->created_at = $entreprise->rue;
+        
 
             $projet->fk_projet_user_id = $user_id;
         } else {
             // Validez les données reçues depuis le formulaire
             $request->validate([
+                
                 'projet_nom' => 'required|string',
-                'detail' => 'required|date',
+                'detail' => 'required|string',
                 'updated_at' => 'required|date',
-                'created_at' => 'required|string',
+                'created_at' => 'required|date',
              
             ]);
             $projet = new Projet;

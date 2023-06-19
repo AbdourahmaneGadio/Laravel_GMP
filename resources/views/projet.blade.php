@@ -13,7 +13,7 @@
     
         <div class="mb-4">
             <label for="alternance_date_debut" class="block mb-1">Nom du projet</label>
-            <input type="date" name="projet_nom" id="projet_nom" value="projet_nom" required class="w-full px-3 py-2 border rounded">
+            <input type="text" name="projet_nom" id="projet_nom" value="" required class="w-full px-3 py-2 border rounded">
             @error('projet_nom')
                 <span class="text-red-500">{{ $message }}</span>
             @enderror
