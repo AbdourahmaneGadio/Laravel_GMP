@@ -99,7 +99,7 @@ Route::get('/alternance', function (){
 Route::post('/projet', [projetController::class, 'store'])->name('projet.store');
 
 Route::get('/projet', function (){
-    return view('alternance');
+    return view('projet');
 });
 
 
