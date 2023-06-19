@@ -1,10 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Note;
 use Illuminate\Http\Request;
-
 use Illuminate\Support\Facades\DB;
 
 class NoteController extends Controller

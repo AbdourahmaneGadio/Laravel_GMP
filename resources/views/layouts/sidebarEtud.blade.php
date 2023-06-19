@@ -53,7 +53,8 @@
 
         width: 18%;
         text-align: left;
-        height: 100%;
+        height: revert;
+
         background: #606c38;
         color: white;
 

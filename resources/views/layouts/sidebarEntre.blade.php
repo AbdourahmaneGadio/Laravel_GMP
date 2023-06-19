@@ -1,5 +1,5 @@
 <ul class="listMenu">
-    <li  class="{{ (request()->is('alternance')) ? ' ' : '' }}">
+    <li class="{{ (request()->is('alternance')) ? ' ' : '' }}">
         <a href="{{url('alternance')}}">Ajouter une offre d'alternance</a>
     </li>
     <li class="{{ (request()->is('projet')) ? ' ' : '' }}">
@@ -47,7 +47,8 @@
 
         width: 18%;
         text-align: left;
-        height: 100%;
+        height: revert;
+
         background: #606c38;
         color: white;
 

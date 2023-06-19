@@ -1,30 +1,15 @@
 
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.model')
+@section('title','Offre d\'alternance')
+@section('content')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-@vite(['resources/css/app.css', 'resources/js/app.js'])
-
-<body>
-    @include('layouts.header')
-    <div class="lienFormation">
-        <h2>DépartementGMP -Genie Mecanique et Productique</h2>
-
-
-
-    </div>
 
     <ul class="listLien">
         <li>ACCUEIL </li>
         <li> > </li>
         <li>ESPACE ETUDIANT </li>
         <li> > </li>
-        <li>MESNOTES</li>
+        <li>MON EMPLOI DU TEMPS</li>
     </ul>
 
 
@@ -55,11 +40,7 @@
 
 
 
-</body>
-@include('layouts.footer')
 
-
-</html>
 <style>
     section {
         min-height: 30vw;
@@ -118,3 +99,4 @@
 
     div.menu {}
 </style>
+@endsection

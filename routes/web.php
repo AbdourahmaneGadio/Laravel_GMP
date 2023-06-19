@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlternanceController;
+use App\Http\Controllers\NoteController;
 use App\Http\Controllers\SupportCours;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EntrepriseController;
@@ -38,7 +39,7 @@ Route::get('/edt', function () {
 });
 
 Route::get('/Mesnotes', function () {
-    return view('profile.profils-Eetudiant.edt');
+    return view('profile.profils-Eetudiant.Mesnotes');
 });
 Route::get('/offresAlterance', function () {
     return view('profile.profils-Eetudiant.offresAlterance');

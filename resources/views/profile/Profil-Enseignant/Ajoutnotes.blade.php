@@ -1,23 +1,9 @@
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-@vite(['resources/css/app.css', 'resources/js/app.js'])
-
-<body>
-    @include('layouts.header')
-    <div class="lienFormation">
-        <h2>DépartementGMP -Genie Mecanique et Productique</h2>
+@extends('layouts.model')
+@section('title','Offre d\'alternance')
+@section('content')
 
 
-
-    </div>
 
     <ul class="listLien">
         <li>ACCUEIL </li>
@@ -79,11 +65,10 @@
 
 
 
-</body>
-@include('layouts.footer')
 
 
-</html>
+
+
 <style>
 /*FORM*/ 
     .Ajoutnotes {
@@ -190,3 +175,4 @@
 
     div.menu {}
 </style>
+@endsection
