@@ -23,6 +23,8 @@
 
   <div class="depot mx-auto my-7">
     <h2>Dépôt du support de cours</h2>
+ 
+
     <br>
 
     <form action="traitement.php" method="POST" enctype="multipart/form-data">
@@ -48,8 +50,12 @@
         </ul>
       </div>
       <br><br>
-      <input type="text" name="matiere" id="matiere" placeholder="Matière*" required>
- 
+      <select name="fk_note_matiere_id" id="matiere" required>
+        <option value="" selected>Matière</option>
+        @foreach ($matieresCours as $matiere)
+        <option value="{{$matiere->matiere_id}}">{{$matiere->matiere_nom}}</option>
+        @endforeach
+      </select>  
       <br><br>
 
       <label for="pdf">Fichier PDF :</label>
