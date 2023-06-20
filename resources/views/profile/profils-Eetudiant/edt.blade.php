@@ -1,38 +1,82 @@
-
 @extends('layouts.model')
 @section('title','Offre d\'alternance')
 @section('content')
 
 
-    <ul class="listLien">
-        <li>ACCUEIL </li>
-        <li> > </li>
-        <li>ESPACE ETUDIANT </li>
-        <li> > </li>
-        <li>MON EMPLOI DU TEMPS</li>
-    </ul>
+<ul class="listLien">
+    <li>ACCUEIL </li>
+    <li> > </li>
+    <li>ESPACE ETUDIANT </li>
+    <li> > </li>
+    <li>MON EMPLOI DU TEMPS</li>
+</ul>
 
 
-    <section>
+<section id="section">
 
-        <ul class="listMenu">
-            <li>Mes Notes </li>
-            <li style="background:white; color:#606c38;"> Mon emploi de temps </li>
-            <li>Mes projets tutorés </li>
-            <li> Les offres</li>
-            <li>Mes candidature</li>
-        </ul>
+    @include('layouts.sidebarEtud')
+    <div class="container w-2/3 mx-auto my-4">
+        <h1>Emploi du temps étudiant</h1>
+        <br>
+
+        <table>
+            <tr>
+                <th>Heure</th>
+                <th>Lundi</th>
+                <th>Mardi</th>
+                <th>Mercredi</th>
+                <th>Jeudi</th>
+                <th>Vendredi</th>
+            </tr>
+            <tr>
+                <td>8:00 - 9:30</td>
+                <td>Informatique 101</td>
+                <td></td>
+                <td>Informatique 201</td>
+                <td>Informatique 101</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9:30 - 11:00</td>
+                <td>Informatique 101</td>
+                <td>Informatique 201</td>
+                <td></td>
+                <td>Informatique 101</td>
+                <td>Informatique 201</td>
+            </tr>
+            <tr>
+                <td>11:00 - 12:30</td>
+                <td></td>
+                <td></td>
+                <td>Informatique 201</td>
+                <td>Informatique 101</td>
+                <td>Informatique 201</td>
+            </tr>
+            <tr>
+                <td>11:00 - 12:30</td>
+                <td></td>
+                <td></td>
+                <td>Informatique 201</td>
+                <td>Informatique 101</td>
+                <td>Informatique 201</td>
+            </tr>
+            <tr>
+                <td>11:00 - 12:30</td>
+                <td></td>
+                <td></td>
+                <td>Informatique 201</td>
+                <td>Informatique 101</td>
+                <td>Informatique 201</td>
+            </tr>
+
+        </table>
+
+    </div>
 
 
 
 
-
-
-
-
-
-
-    </section>
+</section>
 
 
 
@@ -42,7 +86,7 @@
 
 
 <style>
-    section {
+    #section {
         min-height: 30vw;
         height: 100%;
         DISPLAY: flex;
@@ -95,6 +139,25 @@
         text-align: center;
 
     }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
 
 
     div.menu {}

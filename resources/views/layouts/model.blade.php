@@ -95,16 +95,16 @@
                             <a href="#" class="text-[#BC6C25] dark:text-white hover:underline">ESPACE ÉTUDIANT</a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="{{url('notes')}}" class="text-[#BC6C25] dark:text-white hover:underline">Notes</a>
+                                    <a href="{{url('Mesnotes')}}" class="text-[#BC6C25] dark:text-white hover:underline">Notes</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('emploi_temps')}}" class="text-[#BC6C25] dark:text-white hover:underline">Emploi du temps</a>
+                                    <a href="{{url('edt')}}" class="text-[#BC6C25] dark:text-white hover:underline">Emploi du temps</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('candidatures')}}" class="text-[#BC6C25] dark:text-white hover:underline">Candidatures</a>
+                                    <a href="{{url('Mescandidatures')}}" class="text-[#BC6C25] dark:text-white hover:underline">Candidatures</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('projet_tutore')}}" class="text-[#BC6C25] dark:text-white hover:underline">Projet tutorés</a>
+                                    <a href="{{url('MesPT')}}" class="text-[#BC6C25] dark:text-white hover:underline">Projet tutorés</a>
                                 </li>
                                 <li>
                                     <a href="{{url('offres_alternance')}}" class="text-[#BC6C25] dark:text-white hover:underline">Offres d'alternance</a>

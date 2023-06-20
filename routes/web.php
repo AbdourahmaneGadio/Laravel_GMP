@@ -103,6 +103,26 @@ Route::get('/projet', function (){
     return view('projet');
 });
 
+/*Espace etudiant */
+
+Route::get('/edt', function () { 
+    return view('profile.profils-Eetudiant.edt');
+});
+Route::get('/MesPT', function () { 
+    return view('profile.profils-Eetudiant.MesPT');
+});
+
+Route::get('/Mesnotes', function () {
+    return view('profile.profils-Eetudiant.Mesnotes');
+});
+Route::get('/offresAlternance', function () {
+    return view('profile.profils-Eetudiant.offresAlternance');
+});
+Route::get('/Mescandidatures', function () {
+    return view('profile.profils-Eetudiant.Mescandidatures');
+});
+/* */
+
 
 
 Route::middleware('profil.entreprise')->group(function (){

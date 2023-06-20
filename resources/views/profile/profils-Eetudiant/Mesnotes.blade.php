@@ -11,16 +11,55 @@
         <li>MESNOTES</li>
     </ul>
 
-    <section>
+    <section id="section">
 
-        <ul class="listMenu">
-            <li style="background:white; color:#606c38;">Mes Notes </li>
-            <li> Mon emploi de temps </li>
-            <li>Mes projets tutorés </li>
-            <li>Les offres</li>
-            <li>Mes candidature</li>
-        </ul>
 
+
+        @include('layouts.sidebarEtud')
+        <div class="container w-2/3 mx-auto my-4">
+            <label>Choisir le semestre</label>
+
+            <select style="   border: none;background: #80808040;width: 20%;" class="semestrechoice">
+                <option>S1</option>
+                <option>S2</option>
+            </select>
+            <br>
+            <br>
+
+            <table>
+
+                <tr>
+                    <th scope="col">mathématique</th>
+                    <th scope="col">Physique</th>
+                    <th scope="col">Traveaux Pratique</th>
+                    <th scope="col">Traveaux Pratique</th>
+                </tr>
+                <tr>
+
+                    <td>7</td>
+                    <td>7</td>
+                    <td>4,569</td>
+                    <td>6,219</td>
+                </tr>
+                <tr>
+
+                    <td>7</td>
+                    <td>7</td>
+                    <td>7,223</td>
+                    <td>6,219</td>
+                </tr>
+                <tr>
+                    <td scope="row">Mia Oolong</td>
+                    <td>9</td>
+                    <td>6,219</td>
+                    <td>6,219</td>
+                </tr>
+
+            </table>
+
+
+
+        </div>
 
 
 
@@ -37,7 +76,7 @@
 
 
 <style>
-    section {
+    #section {
         min-height: 30vw;
         height: 100%;
         DISPLAY: flex;
@@ -65,6 +104,25 @@
         padding: 19px;
 
 
+    }
+    
+    td {
+        border: 1px solid grey;
+        padding: 17px;
+
+    }
+
+    th {
+        border: 1px solid grey;
+        padding: 17px;
+    }
+
+  
+
+    .lienFormation h2 {
+        color: white;
+        position: relative;
+        margin: auto 114px;
     }
 
     .lienFormation h2 {
