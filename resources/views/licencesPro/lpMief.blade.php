@@ -1,19 +1,8 @@
-<!doctype html>
-<html>
 
-<head>
-    <title>Licence Pro : MIEF</title>
-    <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
 
 <body class="font-medium" style="font-family: Poppins; color:#606C38; background-color: #F5F5F5">
 
-    @include('layouts.header')
+    @include('layouts.model')
     <!-- LP MIEF -->
     <section class="container w-1/2 mx-auto mt-8">
         <h3>LP MIEF</h3>
@@ -129,8 +118,8 @@
         </div>
     </section>
     <!-- Débouchés professionnels -->
-    @include('layouts.footer')
+ 
 
 </body>
+@endsection
 
-</html>

@@ -48,7 +48,7 @@
                                     <a href="{{url('but_gmp')}}" class="text-[#BC6C25] dark:text-white hover:underline">BUT GMP</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('lp_mie')}}" class="text-[#BC6C25] dark:text-white hover:underline">LP MIE</a>
+                                    <a href="{{url('lpMief')}}" class="text-[#BC6C25] dark:text-white hover:underline">LP MIE</a>
                                 </li>
                                 <li>
                                     <a href="{{url('lp_mief')}}" class="text-[#BC6C25] dark:text-white hover:underline">LP MIEF</a>

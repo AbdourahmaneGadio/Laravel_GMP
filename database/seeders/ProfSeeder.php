@@ -6,9 +6,8 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
-use App\Models\Etudiant;
 
-class EtudiantSeeder extends Seeder
+class ProfSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,14 +16,13 @@ class EtudiantSeeder extends Seeder
     {
 
         $user = new User();
-        $user->user_name = 'etudiant';
+        $user->user_name = 'proffesseur';
         $user->user_firstname = 'test';
-        $user->email = 'etudiantTest@gmail.com';
-        $user->fk_role_id = 5;
-        $user->password = Hash::make('password');
+        $user->email = 'proffesseurTest@gmail.com';
+        $user->fk_role_id = 4 ;
+        $user->password = Hash::make('password+');
         $user->save();
-        $etudiant = new Etudiant();
-        $etudiant->fk_etudiant_user_id = $user->id;
+
         
     }
 }
