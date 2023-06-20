@@ -3,8 +3,8 @@
 @section('title','etudiant')
 
 @section('content')
-
-<div class="container mx-auto">
+<x-adminbar/>
+<div class="container mx-auto m-5">
     <h1 class="text-2xl font-bold mb-4">Liste des utilisateurs</h1>
     <table class="min-w-full bg-white border border-gray-300">
         <thead>

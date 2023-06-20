@@ -8,21 +8,21 @@ class AfficheUserController extends Controller
 {
     public function Afficheetudiant()
     {
-        $users = User::where('fk_etudiant_user_id',5)->get();
+        $users = User::where('fk_role_id',5)->get();
         
         return view('admin.user.listetudiant', compact('users'));
     }
     public function Afficheenseignant()
     {
-        $users = User::where('fk_enseignant_user_id',4)->get();
+        $users = User::where('fk_role_id',4)->get();
         
         return view('admin.user.listenseignant', compact('users'));
     }
     public function Afficheentreprise()
     {
-        $users = User::where('fk_entreprise_user_id ',6)->get();
+        $users = User::where('fk_role_id',6)->get();
         
-        return view('admin.user.entreprise', compact('users'));
+        return view('admin.user.listentreprise', compact('users'));
     }
 
     public function destroy(User $user)

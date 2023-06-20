@@ -11,6 +11,19 @@ use Illuminate\Support\Facades\Hash;
 
 class CreateController extends Controller
 {
+    public function showetudiant()
+    {
+        return view('admin.Createuser.admincreateetudiant');
+    }
+    public function showenseignant()
+    {
+        return view('admin.Createuser.admincreateenseignant');
+    }
+    public function showentreprise()
+    {
+        return view('admin.Createuser.admincreateentreprise');
+    }
+
     public function Createenseignant(Request $request) {
         
         

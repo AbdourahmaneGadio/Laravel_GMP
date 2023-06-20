@@ -1,7 +1,9 @@
 @extends('layouts.model')
 
 @section('title','etudiant')
-<div class="container mx-auto">
+@section('content')
+<x-adminbar/>
+<div class="container mx-auto m-5">
     <h1 class="text-2xl font-bold mb-4">Liste des utilisateurs</h1>
     <table class="min-w-full bg-white border border-gray-300">
         <thead>
@@ -33,6 +35,6 @@
     </table>
 </div>
 
-@section('content')
+
 
 @endsection

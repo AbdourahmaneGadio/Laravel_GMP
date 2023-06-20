@@ -9,7 +9,8 @@ use App\Http\Controllers\MesNotesController;
 use App\Http\Controllers\projetController;
 use App\Http\Controllers\SupportCoursController;
 use Illuminate\Routing\RouteRegistrar;
-
+use App\Http\Controllers\CreateController;
+use App\Http\Controllers\AfficheUserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -104,7 +105,7 @@ Route::get('/offresAlternance', [AlternanceController::class, 'index'])->name('o
 /* partie Projet */
 Route::post('/MesPT', [projetController::class, 'store'])->name('MesPT.store');
 
-Route::get('/MesPT', [projetController::class, 'index'])->name('MesPT.store');
+Route::get('/MesPT', [projetController::class, 'index'])->name('MesPT.index');
 
 
 
@@ -136,5 +137,49 @@ Route::middleware('profil.entreprise')->group(function (){
 
     Route::post('profil/entreprise/edit', [EntrepriseController::class, 'store'])->name('entreprise.store');
     Route::get('profil/entreprise/edit', [EntrepriseController::class, 'showedit']);
+
+});
+
+Route::delete('/user/{id}', [AfficheUserController::class, 'destroy'])->name('users.destroy');
+Route::middleware('admin')->group(function (){
+    Route::get('/admin/accueil',function (){
+        return view('admin.adminaccueil');
+    });
+   /*  Route::get('/admin/creationenseignant',function (){
+        return view('admin.Createuser.admincreateenseignant');
+    });
+    Route::get('/admin/creationentreprise',function (){
+        return view('admin.Createuser.admincreateentreprise');
+    });
+    
+    Route::get('/admin/creationetudiant',function (){
+        return view('admin.Createuser.admincreateetudiant');
+    }); */
+    Route::get('/admin/creationenseignant', [CreateController::class, 'showenseignant'])->name('admin.enseignant');
+    Route::get('/admin/creationentreprise', [CreateController::class, 'showentreprise'])->name('admin.entreprise');
+    Route::get('/admin/creationetudiant', [CreateController::class, 'showetudiant'])->name('admin.etudiant');
+/*     Route::get('/admin/etudiant',function (){
+        return view('admin.user.listetudiant');
+    });
+    Route::get('/admin/enseignant',function (){
+        return view('admin.user.listentreprise');
+    });
+    Route::get('/admin/entreprise',function (){
+        return view('admin.user.listenseignant');
+    }); */
+
+    Route::get('admin/enseignant', [AfficheUserController::class, 'Afficheenseignant'])->name('admin.user.listenseignant');
+    Route::get('admin/entreprise', [AfficheUserController::class, 'Afficheentreprise'])->name('admin.user.listentreprise');
+    Route::get('admin/etudiant', [AfficheUserController::class, 'Afficheetudiant'])->name('admin.user.listetudiant');
+
+ /*    Route::post('admin/enseignant', [AfficheUserController::class, 'Afficheenseignant']);
+    Route::post('admin/entreprise', [AfficheUserController::class, 'Afficheentreprise']);
+    Route::post('admin/etudiant', [AfficheUserController::class, 'Afficheetudiant']); */
+
+
+
+    Route::post('admin/creationenseignant', [CreateController::class, 'Createenseignant']);
+    Route::post('admin/creationentreprise', [CreateController::class, 'Createentreprise']);
+    Route::post('admin/creationetudiant', [CreateController::class, 'Createetudiant']);
 
 });
