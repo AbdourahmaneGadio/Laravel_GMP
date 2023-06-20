@@ -23,11 +23,12 @@
 
   <div class="depot mx-auto my-7">
     <h2>Dépôt du support de cours</h2>
- 
+
 
     <br>
 
-    <form action="traitement.php" method="POST" enctype="multipart/form-data">
+    <form action="{{route('supportCours.add')}}" method="POST" enctype="multipart/form-data">
+      @csrf
       <div>
         <label for="pdf">Classe :</label>
         <ul class="flex flex-row justify-center">
@@ -50,16 +51,18 @@
         </ul>
       </div>
       <br><br>
-      <select name="fk_note_matiere_id" id="matiere" required>
+      <select name="fk_cours_matiere_id" id="matiere" required>
         <option value="" selected>Matière</option>
         @foreach ($matieresCours as $matiere)
         <option value="{{$matiere->matiere_id}}">{{$matiere->matiere_nom}}</option>
         @endforeach
-      </select>  
+      </select>
+      <input type="hidden" name="cours_nom" id="cours_nom"></input>
+
       <br><br>
 
       <label for="pdf">Fichier PDF :</label>
-      <input type="file" id="pdf" name="pdf" accept="application/pdf">
+      <input type="file" id="pdf" name="pdf" accept="application/pdf" required>
 
       <br><br>
 
@@ -71,6 +74,21 @@
 
 
 </section>
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+</script>
+<script>
+  jQuery(document).ready(function() {
+    jQuery('#matiere').on('change', function(e) {
+      var optionSelected = $("option:selected", this).text();
+
+      var inputCache = $('#cours_nom');
+
+      inputCache.val(optionSelected);
+
+    });
+  });
+</script>
 
 
 

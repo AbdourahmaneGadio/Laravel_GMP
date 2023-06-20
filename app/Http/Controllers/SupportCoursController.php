@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cours;
+use App\Models\Cour;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
@@ -24,12 +24,12 @@ class SupportCoursController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    // public function create(Request $request)
-    // {
-    //     //  Store data in database
-    //     cours::create($request->all());
-    //     return back()->with('success', 'Your form has been submitted.');
-    // }
+    public function create(Request $request)
+    {
+        //  Store data in database
+        Cour::create($request->all());
+        return back()->with('success', 'Your form has been submitted.');
+    }
 
     // /**
     //  * Store a newly created resource in storage.
