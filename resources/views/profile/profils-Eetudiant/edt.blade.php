@@ -30,43 +30,43 @@
             </tr>
             <tr>
                 <td>8:00 - 9:30</td>
-                <td>Informatique 101</td>
+                <td>Physique</td>
                 <td></td>
-                <td>Informatique 201</td>
-                <td>Informatique 101</td>
+                <td>Visualisation linux</td>
+                <td>Programmation  </td>
                 <td></td>
             </tr>
             <tr>
                 <td>9:30 - 11:00</td>
-                <td>Informatique 101</td>
-                <td>Informatique 201</td>
+                <td>Informatique </td>
+                <td>Mecanique Generale</td>
                 <td></td>
-                <td>Informatique 101</td>
-                <td>Informatique 201</td>
+                <td>Modilisation 3D</td>
+                <td>Conception</td>
             </tr>
             <tr>
                 <td>11:00 - 12:30</td>
                 <td></td>
                 <td></td>
-                <td>Informatique 201</td>
-                <td>Informatique 101</td>
-                <td>Informatique 201</td>
+                <td>Mathematique</td>
+                <td> Anglais</td>
+                <td>Gestion de projet</td>
             </tr>
             <tr>
                 <td>11:00 - 12:30</td>
                 <td></td>
                 <td></td>
-                <td>Informatique 201</td>
-                <td>Informatique 101</td>
-                <td>Informatique 201</td>
+                <td>Shell</td>
+                <td>Anglais </td>
+                <td>Modilisation </td>
             </tr>
             <tr>
                 <td>11:00 - 12:30</td>
+                <td>Physique    </td>
                 <td></td>
-                <td></td>
-                <td>Informatique 201</td>
-                <td>Informatique 101</td>
-                <td>Informatique 201</td>
+                <td>Mathematique </td>
+                <td> </td>
+                <td>conception </td>
             </tr>
 
         </table>
