@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>@yield('title')</title>
-
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
@@ -111,10 +111,12 @@
                                 </li>
                             </ul>
                         </li>
-                        @else
+                        @elseif(auth()->check() && auth()->user()->fk_role_id === 3)
 
                         @endif
-
+                        <li>
+                            <a href="{{url('admin/accueil')}}" class="text-[#606C38] dark:text-white hover:underline" aria-current="page">Pannel administrateur</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
