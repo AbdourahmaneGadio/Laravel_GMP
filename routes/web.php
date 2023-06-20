@@ -92,15 +92,15 @@ Route::get('/lpMie', function () {
 
 Route::post('/alternance', [AlternanceController::class, 'store'])->name('alternance.store');
 
-Route::get('/offresAlternance', [AlternanceController::class, 'index'])->name('offreAlternance.store');
-
+Route::get('/alternance', function (){
+    return view('alternance');});
 // Route::get('/offresAlternance', function () {
 //     return view('profile.profils-Eetudiant.offresAlternance');
 // });
 /*FinAlternance */
 
 
-Route::post('/alternance', [AlternanceController::class, 'store'])->name('alternance.store');
+// Route::post('/offresAlternance, [AlternanceController::class, 'store'])->name('offresalternance.store');
 
 Route::get('/offresAlternance', [AlternanceController::class, 'index'])->name('offreAlternance.store');
 
