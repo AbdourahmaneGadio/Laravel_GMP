@@ -80,7 +80,7 @@
                                     <a href="{{url('Ajoutnotes')}}" class="text-[#BC6C25] dark:text-white hover:underline">Notes</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('edt')}}" class="text-[#BC6C25] dark:text-white hover:underline">Emploi du temps</a>
+                                    <a href="{{url('edtprofs')}}" class="text-[#BC6C25] dark:text-white hover:underline">Emploi du temps</a>
                                 </li>
                                 <li>
                                     <a href="{{url('supportCours')}}" class="text-[#BC6C25] dark:text-white hover:underline">Support de cours</a>

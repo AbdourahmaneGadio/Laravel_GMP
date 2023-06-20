@@ -60,9 +60,9 @@ Route::get('/Ajoutnotes/showClasse{idClasse}', [NoteController::class, 'show'])-
 Route::get('/supportCours', [NoteController::class, 'index'])->name('supportCours.index');
 
 
-Route::post('/Ajoutnotes', [NoteController::class, 'create'])->name('supportCours.add');
+Route::post('/supportCours', [NoteController::class, 'create'])->name('supportCours.add');
 
-Route::get('/Ajoutnotes/showClasse{idClasse}', [NoteController::class, 'show'])->name('supportCours.show');
+Route::get('/supportCours/showClasse{idClasse}', [NoteController::class, 'show'])->name('supportCours.show');
 
 /*Fin de la partie ajouter Cours */
 
