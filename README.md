@@ -1,6 +1,8 @@
 # Laravel GMP
 Version Laravel Fortify du site GMP
 
+![logo_gmp](https://github.com/AbdourahmaneGadio/Laravel_GMP/assets/91066652/156283cb-6c87-4a75-af2d-fd1b7f902126)
+
 ---
 
 ## Installation
@@ -21,7 +23,7 @@ Afin d'administrer la base de données du projet, vous devez installer PHPMyAdmi
 
 Prenez la version la plus récente (5.21 au 20.06.2023)
 
-### Fichier d'environnement
+### Fichier d'environnement
 Copiez le fichier .env.example vers un fichier au même emplacement, nommé .env
 
 ```console
