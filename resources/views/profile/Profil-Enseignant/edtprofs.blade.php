@@ -1,5 +1,5 @@
 @extends('layouts.model')
-@section('title','Offre d\'edt')
+@section('title','Offre d\'edt profs')
 @section('content')
 
 

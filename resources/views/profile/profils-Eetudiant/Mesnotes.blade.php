@@ -1,6 +1,6 @@
 
 @extends('layouts.model')
-@section('title','Offre d\'alternance')
+@section('title','Mes notes')
 @section('content')
 
     <ul class="listLien">

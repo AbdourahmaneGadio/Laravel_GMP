@@ -1,5 +1,5 @@
 @extends('layouts.model')
-@section('title','Offre d\'alternance')
+@section('title','Ajouter Notes')
 @section('content')
 
 
