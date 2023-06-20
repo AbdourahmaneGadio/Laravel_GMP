@@ -1,5 +1,5 @@
 @extends('layouts.model')
-@section('title','\'projet')
+@section('title','Ajouter un projet tutoré')
 @section('content')
 
 <section id="section">
