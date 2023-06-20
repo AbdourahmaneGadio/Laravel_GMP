@@ -82,20 +82,25 @@ Route::get('/lpMief', function () {
     return view('licencesPro.lpMief');
 });
 
-
-Route::get('/lp-mri', function () {
+Route::get('/lpMri', function () {
     return view('licencesPro.lpMri');
 });
 
-Route::get('/lp-mie', function () {
+Route::get('/lpMie', function () {
     return view('licencesPro.lpMie');
 });
 
+/*Debut Alternance*/
+
 Route::post('/alternance', [AlternanceController::class, 'store'])->name('alternance.store');
 
-Route::get('/alternance', function (){
-    return view('alternance');
-});
+Route::get('/offresAlternance', [AlternanceController::class, 'index'])->name('offreAlternance.store');
+
+// Route::get('/offresAlternance', function () {
+//     return view('profile.profils-Eetudiant.offresAlternance');
+// });
+/*FinAlternance */
+
 
 Route::post('/projet', [projetController::class, 'store'])->name('projet.store');
 
@@ -115,9 +120,7 @@ Route::get('/MesPT', function () {
 Route::get('/Mesnotes', function () {
     return view('profile.profils-Eetudiant.Mesnotes');
 });
-Route::get('/offresAlternance', function () {
-    return view('profile.profils-Eetudiant.offresAlternance');
-});
+
 Route::get('/Mescandidatures', function () {
     return view('profile.profils-Eetudiant.Mescandidatures');
 });
