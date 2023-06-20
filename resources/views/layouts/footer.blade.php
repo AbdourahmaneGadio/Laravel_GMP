@@ -92,7 +92,7 @@
         <!-- Copyright -->
         <!-- Mentions légales -->
 
-        <div><a href="{{ url('/dashboard') }}">
+        <div><a href="{{ url('/mentionslegales') }}">
                 <span class="hover:font-bold">
                     Contact – Mentions légales</span></a>
         </div>
