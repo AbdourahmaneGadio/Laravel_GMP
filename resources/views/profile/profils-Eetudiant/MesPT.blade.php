@@ -37,28 +37,28 @@
         <!-- Filtres -->
 
         <!-- Offres -->
+
+        @foreach ($projets as $projet)
         <div style="background-color: #E6E6E6" class="p-8 h-min mb-3 shadow-lg">
-            <span>JUNIOR / EXPERIENCED SOFTWARE ENGINEER</span>
+
             <div id="nomEntreprise" class="flex">
-                <span> <strong> ENTREPRISE </strong> :JUNIOR / EXPERIENCED SOFTWARE ENGINEER</span>
+                <span> <strong style="font-size: 23px;"> ENTREPRISE </strong> :JUNIOR / EXPERIENCED SOFTWARE ENGINEER</span>
 
             </div>
             <div id="descriptionPoste">
                 <div>
-                    <span>Description du projet</span>
+
+                    <span style="font-size:20px; color:blue;">{{ $projet->projet_nom }}</span>
                 </div>
+            
                 <div>
-                    <span>EXPERIENCED SOFTWARE ENGINEER – HYBRID CLOUD (REMOTE FRANCE)</span>
-                </div>
-                <div>
-                    <p>We design and market “FieldLogs”, an open Cloud, Mobile and Wearable
-                        platform used to digitize a wide set
-                        of enterprise technician-driven processes
-                        (Aviation, Oil&Gas, Asset Management, etc.).
+                    <span >Description du projet :</span>
+                    <p>{{ $projet->detail }}
                     </p>
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
 
 

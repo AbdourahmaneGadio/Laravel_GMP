@@ -17,15 +17,11 @@
     @include('layouts.sidebarEtud')
     <div class="container w-2/3 mx-auto my-4">
         @foreach ($offresAlternance as $alternance)
-        <!-- </p>
-        <p>Date de début : {{ $alternance->alternance_date_debut }}</p>
-        <p>Date de fin : {{ $alternance->alternance_date_fin }}</p>
-        <p>Détails : {{ $alternance->alternance_detail }}</p> -->
-        <!-- Ajoutez les autres informations que vous souhaitez afficher -->
+
 
 
         <div style="background-color: #E6E6E6" class="p-8 h-min mb-3 shadow-lg">
-            <span>{{ $alternance->alternance_nom }}</span>
+            <span style="font-size: 23px;">{{ $alternance->alternance_nom }}</span>
             <div id="nomEntreprise" class="flex">
                 <span style="color: blue ; ">{{ $alternance->alternance_ville }}</span> <br>
                 <span style="color: #8988BC">{{ $alternance->alternance_rue }}</span><br>
@@ -33,7 +29,7 @@
             </div>
             <div id="descriptionPoste">
                 <div>
-                    <span>Description du poste</span>
+                    <span style="font-weight: 500; color:red">Description du poste :</span>
                 </div>
 
                 <div>
@@ -43,10 +39,10 @@
 
                 <div style="    padding: 2px;
     float: right;">
-                    <p>Contactez-nous : <a style="color: #8988BC; text-decoration:underline;">{{ $alternance->alternance_email }}
+                    <p>Contactez-nous : <a  href="mailto:{{ Auth::user()->email }}" style="color: #8988BC; text-decoration:underline;">{{ $alternance->alternance_email }}
                         </a>
                     </p>
-                </div>
+                </div>mailto:{{ Auth::user()->email }}
             </div>
         </div>
         @endforeach

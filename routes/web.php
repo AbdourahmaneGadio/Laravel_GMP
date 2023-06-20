@@ -101,7 +101,17 @@ Route::get('/offresAlternance', [AlternanceController::class, 'index'])->name('o
 /*FinAlternance */
 
 
-Route::post('/projet', [projetController::class, 'store'])->name('projet.store');
+Route::post('/alternance', [AlternanceController::class, 'store'])->name('alternance.store');
+
+Route::get('/offresAlternance', [AlternanceController::class, 'index'])->name('offreAlternance.store');
+
+
+/* partie Projet */
+Route::post('/MesPT', [projetController::class, 'store'])->name('MesPT.store');
+
+Route::get('/MesPT', [projetController::class, 'index'])->name('MesPT.store');
+
+
 
 Route::get('/projet', function (){
     return view('projet');
@@ -112,9 +122,9 @@ Route::get('/projet', function (){
 Route::get('/edt', function () { 
     return view('profile.profils-Eetudiant.edt');
 });
-Route::get('/MesPT', function () { 
-    return view('profile.profils-Eetudiant.MesPT');
-});
+// Route::get('/MesPT', function () { 
+//     return view('profile.profils-Eetudiant.MesPT');
+// });
 
 Route::get('/Mesnotes', function () {
     return view('profile.profils-Eetudiant.Mesnotes');
