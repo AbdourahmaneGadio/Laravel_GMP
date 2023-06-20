@@ -66,6 +66,8 @@ Route::get('/edtprofs', function () {
     return view('profile.Profil-Enseignant.edtprofs');
 });
 
+
+
 /*Fin de la partie Ee */
 
 Route::get('/licencesPro', function () {

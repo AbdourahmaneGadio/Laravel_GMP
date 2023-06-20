@@ -21,56 +21,56 @@
     <br>
 
     <table>
-      <tr>
-        <th>Heure</th>
-        <th>Lundi</th>
-        <th>Mardi</th>
-        <th>Mercredi</th>
-        <th>Jeudi</th>
-        <th>Vendredi</th>
-      </tr>
-      <tr>
-        <td>8:00 - 9:30</td>
-        <td>Informatique 101</td>
-        <td></td>
-        <td>Informatique 201</td>
-        <td>Informatique 101</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>9:30 - 11:00</td>
-        <td>Informatique 101</td>
-        <td>Informatique 201</td>
-        <td></td>
-        <td>Informatique 101</td>
-        <td>Informatique 201</td>
-      </tr>
-      <tr>
-        <td>11:00 - 12:30</td>
-        <td></td>
-        <td></td>
-        <td>Informatique 201</td>
-        <td>Informatique 101</td>
-        <td>Informatique 201</td>
-      </tr>
-      <tr>
-        <td>11:00 - 12:30</td>
-        <td></td>
-        <td></td>
-        <td>Informatique 201</td>
-        <td>Informatique 101</td>
-        <td>Informatique 201</td>
-      </tr>
-      <tr>
-        <td>11:00 - 12:30</td>
-        <td></td>
-        <td></td>
-        <td>Informatique 201</td>
-        <td>Informatique 101</td>
-        <td>Informatique 201</td>
-      </tr>
+            <tr>
+                <th>Heure</th>
+                <th>Lundi</th>
+                <th>Mardi</th>
+                <th>Mercredi</th>
+                <th>Jeudi</th>
+                <th>Vendredi</th>
+            </tr>
+            <tr>
+                <td>8:00 - 9:30</td>
+                <td>Physique</td>
+                <td></td>
+                <td>Visualisation linux</td>
+                <td>Programmation  </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9:30 - 11:00</td>
+                <td>Informatique </td>
+                <td>Mecanique Generale</td>
+                <td></td>
+                <td>Modilisation 3D</td>
+                <td>Conception</td>
+            </tr>
+            <tr>
+                <td>11:00 - 12:30</td>
+                <td></td>
+                <td></td>
+                <td>Mathematique</td>
+                <td> Anglais</td>
+                <td>Gestion de projet</td>
+            </tr>
+            <tr>
+                <td>11:00 - 12:30</td>
+                <td></td>
+                <td></td>
+                <td>Shell</td>
+                <td>Anglais </td>
+                <td>Modilisation </td>
+            </tr>
+            <tr>
+                <td>11:00 - 12:30</td>
+                <td>Physique    </td>
+                <td></td>
+                <td>Mathematique </td>
+                <td> </td>
+                <td>conception </td>
+            </tr>
 
-    </table>
+        </table>
 
 
     <br><br>
@@ -81,7 +81,7 @@
 
       <br>
 
-      <form action="traitement.php" method="POST" enctype="multipart/form-data">
+      <form enctype="multipart/form-data">
         <div>
           <label for="pdf">Classe :</label>
           <ul class="flex flex-row justify-center">
