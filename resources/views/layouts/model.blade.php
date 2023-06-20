@@ -51,10 +51,10 @@
                                     <a href="{{url('lpMief')}}" class="text-[#BC6C25] dark:text-white hover:underline">LP MIE</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('lp_mief')}}" class="text-[#BC6C25] dark:text-white hover:underline">LP MIEF</a>
+                                    <a href="{{url('lpMief')}}" class="text-[#BC6C25] dark:text-white hover:underline">LP MIEF</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('lp_mri')}}" class="text-[#BC6C25] dark:text-white hover:underline">LP MRI</a>
+                                    <a href="{{url('lpMri')}}" class="text-[#BC6C25] dark:text-white hover:underline">LP MRI</a>
                                 </li>
                             </ul>
                         </li>

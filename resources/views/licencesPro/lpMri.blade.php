@@ -1,19 +1,12 @@
-<!doctype html>
-<html>
+@extends('layouts.model')
+@section('title','LP MRI')
+@section('content')
 
-<head>
-    <title>Licence Pro : MRI</title>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
 
 <body class="font-medium" style="font-family: Poppins; color:#606C38; background-color: #F5F5F5">
 
-    @include('layouts.header')
+  
     <!-- LP MRI -->
     <section class="container w-1/2 mx-auto mt-8">
         <h3>Présentation</h3>
@@ -146,8 +139,8 @@ Mécatronicien…
         </div>
     </section>
     <!-- Débouchés professionnels -->
-    @include('layouts.footer')
+
 
 </body>
 
-</html>
+@endsection
