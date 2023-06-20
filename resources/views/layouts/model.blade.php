@@ -112,11 +112,12 @@
                             </ul>
                         </li>
                         @elseif(auth()->check() && auth()->user()->fk_role_id === 3)
-
-                        @endif
                         <li>
                             <a href="{{url('admin/accueil')}}" class="text-[#606C38] dark:text-white hover:underline" aria-current="page">Pannel administrateur</a>
                         </li>
+                        
+                        @endif
+                       
                     </ul>
                 </div>
                 <div>
