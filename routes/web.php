@@ -88,8 +88,9 @@ Route::get('/lpMie', function () {
 
 Route::post('/alternance', [AlternanceController::class, 'store'])->name('alternance.store');
 
-Route::get('/alternance', function (){
-    return view('alternance');});
+Route::get('/alternance', function () {
+    return view('alternance');
+});
 // Route::get('/offresAlternance', function () {
 //     return view('profile.profils-Eetudiant.offresAlternance');
 // });
@@ -107,22 +108,22 @@ Route::post('/MesPT', [projetController::class, 'store'])->name('MesPT.store');
 Route::get('/MesPT', [projetController::class, 'index'])->name('MesPT.store');
 
 
-
-Route::get('/projet', function (){
+Route::post('/projet', [projetController::class, 'store'])->name('projet.store');
+Route::get('/projet', function () {
     return view('projet');
 });
-Route::post('/projet', [projetController::class, 'store'])->name('projet.store');
+
 
 /*Espace etudiant */
 
-Route::get('/edt', function () { 
+Route::get('/edt', function () {
     return view('profile.profils-Eetudiant.edt');
 });
 // Route::get('/MesPT', function () { 
 //     return view('profile.profils-Eetudiant.MesPT');
 // });
 
-Route::get('/Mesnotes',[MesNotesController::class, 'index'])->name('Mesnotes.show');
+Route::get('/Mesnotes', [MesNotesController::class, 'index'])->name('Mesnotes.show');
 
 Route::get('/Mescandidatures', function () {
     return view('profile.profils-Eetudiant.Mescandidatures');
@@ -131,10 +132,9 @@ Route::get('/Mescandidatures', function () {
 
 
 
-Route::middleware('profil.entreprise')->group(function (){
-    Route::get('/profil/entreprise',[EntrepriseController::class, 'show']);
+Route::middleware('profil.entreprise')->group(function () {
+    Route::get('/profil/entreprise', [EntrepriseController::class, 'show']);
 
     Route::post('profil/entreprise/edit', [EntrepriseController::class, 'store'])->name('entreprise.store');
     Route::get('profil/entreprise/edit', [EntrepriseController::class, 'showedit']);
-
 });
