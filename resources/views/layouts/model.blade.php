@@ -104,7 +104,7 @@
                                     <a href="{{url('Mescandidatures')}}" class="text-[#BC6C25] dark:text-white hover:underline">Candidatures</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('MesPT')}}" class="text-[#BC6C25] dark:text-white hover:underline">Projet tutorés</a>
+                                    <a href="{{url('MesPT')}}" class="text-[#BC6C25] dark:text-white hover:underline">Projets tutorés</a>
                                 </li>
                                 <li>
                                     <a href="{{url('offres_alternance')}}" class="text-[#BC6C25] dark:text-white hover:underline">Offres d'alternance</a>
