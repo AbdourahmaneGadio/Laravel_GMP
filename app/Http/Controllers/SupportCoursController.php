@@ -7,20 +7,17 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
 
-class SupportCours extends Controller
+class SupportCoursController extends Controller
 {
     /**
      * Display a listing of the resource.
-     */ 
+     */
     public function index()
     {
-        // $etudiants = DB::table('etudiant')->where('id_classe', '1')->get();
-        $cours = DB::table('cours')->where('idCours', '1')->get();
         $matieres = DB::table('matiere')->get();
 
         return view('profile.Profil-Enseignant.supportCours', [
-            'matieres' => $matieres,
-            'cours' => $cours,
+            'matieresCours' => $matieres,
         ]);
     }
 
