@@ -1,7 +1,7 @@
 # Laravel GMP
 Version Laravel Fortify du site GMP
 
-==============
+---
 
 ## Installation
 Clonez le projet
@@ -18,6 +18,8 @@ sudo apt update && sudo apt install apache2 -y
 
 ### PHPMyAdmin
 Afin d'administrer la base de données du projet, vous devez installer PHPMyAdmin sur votre ordinateur : https://www.phpmyadmin.net/downloads/
+
+Prenez la version la plus récente (5.21 au 20.06.2023)
 
 ### Fichier d'environnement
 Copiez le fichier .env.example vers un fichier au même emplacement, nommé .env
