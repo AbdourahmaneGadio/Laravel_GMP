@@ -2,37 +2,38 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cours;
+use App\Models\Cour;
+use App\Models\File;
+
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
 
-class SupportCours extends Controller
+class SupportCoursController extends Controller
 {
     /**
      * Display a listing of the resource.
-     */ 
+     */
     public function index()
     {
-        // $etudiants = DB::table('etudiant')->where('id_classe', '1')->get();
-        $cours = DB::table('cours')->where('idCours', '1')->get();
         $matieres = DB::table('matiere')->get();
 
         return view('profile.Profil-Enseignant.supportCours', [
-            'matieres' => $matieres,
-            'cours' => $cours,
+            'matieresCours' => $matieres,
         ]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    // public function create(Request $request)
-    // {
-    //     //  Store data in database
-    //     cours::create($request->all());
-    //     return back()->with('success', 'Your form has been submitted.');
-    // }
+    public function create(Request $request)
+    {
+      
+            //  Store data in database
+            Cour::create($request->all());
+            return back()->with('success', 'Your form has been submitted.');
+        
+    }
 
     // /**
     //  * Store a newly created resource in storage.

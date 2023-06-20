@@ -51,22 +51,24 @@
             <div class="mt-3"> <a href="{{ url('/') }}">
                     <span>FORMATION</span></a>
             </div>
-
+            @if(!auth()->check() || auth()->user()->fk_role_id === 6)
             <div class="mt-3"> <a href="{{ url('/') }}">
                     <span>ESPACE ENTREPRISE</span></a></div>
 
-
+                    @elseif(auth()->check() && auth()->user()->fk_role_id === 4)
             <div class="mt-3"> <a href="{{ url('/') }}">
                     <span>ESPACE ENSEIGNANT</span></a></div>
-
-            <div class="mt-3">
-                <a href="{{ url('/') }}">
+                   
+                    @elseif(auth()->check() && auth()->user()->fk_role_id === 5)
+            <div class="mt-3"> <a href="{{ url('/') }}">
 
                     <span>ESPACE ÉTUDIANT</span></a>
             </div>
 
 
-            
+            @else
+
+                        @endif
         </div>
         <!-- Navigation -->
 
@@ -92,7 +94,7 @@
         <!-- Copyright -->
         <!-- Mentions légales -->
 
-        <div><a href="{{ url('/dashboard') }}">
+        <div><a href="{{ url('/mentionslegales') }}">
                 <span class="hover:font-bold">
                     Contact – Mentions légales</span></a>
         </div>

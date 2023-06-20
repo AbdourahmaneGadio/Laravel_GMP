@@ -6,6 +6,7 @@ use App\Http\Controllers\SupportCours;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EntrepriseController;
 use App\Http\Controllers\projetController;
+use App\Http\Controllers\SupportCoursController;
 use Illuminate\Routing\RouteRegistrar;
 
 /*
@@ -27,7 +28,9 @@ Route::get('/formation', function () {
     return view('licencesPro.lpMie');
 });
 
-
+Route::get('/mentionslegales', function () {
+    return view('mentionslegales');
+});
 
 
 Route::get('/gmp', function () {
@@ -57,21 +60,17 @@ Route::get('/Ajoutnotes/showClasse{idClasse}', [NoteController::class, 'show'])-
 
 // ajouter le SupportCours 
 
-Route::get('/supportCours', [NoteController::class, 'index'])->name('supportCours.index');
+Route::get('/supportCours', [SupportCoursController::class, 'index'])->name('supportCours.index');
 
 
-Route::post('/supportCours', [NoteController::class, 'create'])->name('supportCours.add');
-
-Route::get('/supportCours/showClasse{idClasse}', [NoteController::class, 'show'])->name('supportCours.show');
+Route::post('/supportCours', [SupportCoursController::class, 'create'])->name('supportCours.add');
 
 /*Fin de la partie ajouter Cours */
 
 Route::get('/edtprofs', function () {
     return view('profile.Profil-Enseignant.edtprofs');
 });
-Route::get('/supportCours', function () {
-    return view('profile.Profil-Enseignant.supportCours');
-});
+
 /*Fin de la partie Ee */
 
 Route::get('/licencesPro', function () {

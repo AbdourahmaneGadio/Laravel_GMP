@@ -50,14 +50,17 @@
       <br><br>
       <input type="hidden" name="id_enseignant" value="{{auth()->id();}}">
 
-      <select name="id_etudiant" id="etudiant" required>
+      <select name="fk_note_etudiant_id" id="etudiant" required>
         <option value="" selected>Etudiant</option>
+        @foreach ($etudiants as $etudiantActuel)
+        <option value="{{$etudiantActuel->user_id}}">{{$etudiantActuel->user_name}} {{$etudiantActuel->user_firstname}}</option>
+        @endforeach
       </select>
       <br><br>
-      <select name="id_matiere" id="matiere" required>
+      <select name="fk_note_matiere_id" id="matiere" required>
         <option value="" selected>Matière</option>
         @foreach ($matieres as $matiere)
-        <option value="{{$matiere->id_matiere}}">{{$matiere->nom_matiere}}</option>
+        <option value="{{$matiere->matiere_id}}">{{$matiere->matiere_nom}}</option>
         @endforeach
       </select> <br><br>
 

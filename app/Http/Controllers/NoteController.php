@@ -12,11 +12,12 @@ class NoteController extends Controller
      */
     public function index()
     {
-        $etudiants = DB::table('etudiant')->where('id_classe', '1')->get();
+        $etudiants = DB::table('users')->where('fk_role_id', '5')->get();
         $matieres = DB::table('matiere')->get();
 
         return view('profile.Profil-Enseignant.Ajoutnotes', [
             'matieres' => $matieres,
+            'etudiants' => $etudiants,
         ]);
     }
 
