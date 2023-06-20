@@ -1,19 +1,7 @@
-<!doctype html>
-<html>
+@extends('layouts.model')
+@section('title','Departement GMP')
+@section('content')
 
-<head>
-    <title>Licences professionnelles (L3)</title>
-    <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-
-<body class="font-medium" style="font-family: Poppins; color:#606C38; background-color: #F5F5F5">
-
-    @include('layouts.header')
     <!-- Licences professionnelles -->
     <section class="container w-1/2 mx-auto mt-8">
         <h3>Licences professionnelles (L3)</h3>
@@ -50,9 +38,4 @@
 
 
     </section>
-    <!-- Science, technologie, santé -->
-    @include('layouts.footer')
-
-</body>
-
-</html>
+    @endsection
