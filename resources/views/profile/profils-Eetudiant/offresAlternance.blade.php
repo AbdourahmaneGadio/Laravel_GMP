@@ -16,96 +16,42 @@
 
     @include('layouts.sidebarEtud')
     <div class="container w-2/3 mx-auto my-4">
+        @foreach ($offresAlternance as $alternance)
+        <!-- </p>
+        <p>Date de début : {{ $alternance->alternance_date_debut }}</p>
+        <p>Date de fin : {{ $alternance->alternance_date_fin }}</p>
+        <p>Détails : {{ $alternance->alternance_detail }}</p> -->
+        <!-- Ajoutez les autres informations que vous souhaitez afficher -->
+
 
         <div style="background-color: #E6E6E6" class="p-8 h-min mb-3 shadow-lg">
-            <span>JUNIOR / EXPERIENCED SOFTWARE ENGINEER</span>
+            <span>{{ $alternance->alternance_nom }}</span>
             <div id="nomEntreprise" class="flex">
-                <span style="color: #1813F4" class="me-3">TREKEA SAS</span>
-                <span style="color: #8988BC">93700 DRANCY</span>
+                <span style="color: blue ; ">{{ $alternance->alternance_ville }}</span> <br>
+                <span style="color: #8988BC">{{ $alternance->alternance_rue }}</span><br>
+                <span style="color: #8988BC">{{ $alternance->alternance_code_postal }}</span>
             </div>
             <div id="descriptionPoste">
                 <div>
                     <span>Description du poste</span>
                 </div>
+
                 <div>
-                    <span>EXPERIENCED SOFTWARE ENGINEER – HYBRID CLOUD (REMOTE FRANCE)</span>
+                    <p>{{ $alternance->alternance_detail }}
+                    </p>
                 </div>
-                <div>
-                    <p>We design and market “FieldLogs”, an open Cloud, Mobile and Wearable
-                        platform used to digitize a wide set
-                        of enterprise technician-driven processes
-                        (Aviation, Oil&Gas, Asset Management, etc.).
+
+                <div style="    padding: 2px;
+    float: right;">
+                    <p>Contactez-nous : <a style="color: #8988BC; text-decoration:underline;">{{ $alternance->alternance_email }}
+                        </a>
                     </p>
                 </div>
             </div>
         </div>
+        @endforeach
 
-        <div style="background-color: #E6E6E6" class="p-8 h-min mb-3 shadow-lg">
-            <span>JUNIOR / EXPERIENCED SOFTWARE ENGINEER</span>
-            <div id="nomEntreprise" class="flex">
-                <span style="color: #1813F4" class="me-3">TREKEA SAS</span>
-                <span style="color: #8988BC">93700 DRANCY</span>
-            </div>
-            <div id="descriptionPoste">
-                <div>
-                    <span>Description du poste</span>
-                </div>
-                <div>
-                    <span>EXPERIENCED SOFTWARE ENGINEER – HYBRID CLOUD (REMOTE FRANCE)</span>
-                </div>
-                <div>
-                    <p>We design and market “FieldLogs”, an open Cloud, Mobile and Wearable
-                        platform used to digitize a wide set
-                        of enterprise technician-driven processes
-                        (Aviation, Oil&Gas, Asset Management, etc.).
-                    </p>
-                </div>
-            </div>
-        </div>  
-        <div style="background-color: #E6E6E6" class="p-8 h-min mb-3 shadow-lg">
-            <span>JUNIOR / EXPERIENCED SOFTWARE ENGINEER</span>
-            <div id="nomEntreprise" class="flex">
-                <span style="color: #1813F4" class="me-3">TREKEA SAS</span>
-                <span style="color: #8988BC">93700 DRANCY</span>
-            </div>
-            <div id="descriptionPoste">
-                <div>
-                    <span>Description du poste</span>
-                </div>
-                <div>
-                    <span>EXPERIENCED SOFTWARE ENGINEER – HYBRID CLOUD (REMOTE FRANCE)</span>
-                </div>
-                <div>
-                    <p>We design and market “FieldLogs”, an open Cloud, Mobile and Wearable
-                        platform used to digitize a wide set
-                        of enterprise technician-driven processes
-                        (Aviation, Oil&Gas, Asset Management, etc.).
-                    </p>
-                </div>
-            </div>
-        </div>  
-        <div style="background-color: #E6E6E6" class="p-8 h-min mb-3 shadow-lg">
-            <span>JUNIOR / EXPERIENCED SOFTWARE ENGINEER</span>
-            <div id="nomEntreprise" class="flex">
-                <span style="color: #1813F4" class="me-3">TREKEA SAS</span>
-                <span style="color: #8988BC">93700 DRANCY</span>
-            </div>
-            <div id="descriptionPoste">
-                <div>
-                    <span>Description du poste</span>
-                </div>
-                <div>
-                    <span>EXPERIENCED SOFTWARE ENGINEER – HYBRID CLOUD (REMOTE FRANCE)</span>
-                </div>
-                <div>
-                    <p>We design and market “FieldLogs”, an open Cloud, Mobile and Wearable
-                        platform used to digitize a wide set
-                        of enterprise technician-driven processes
-                        (Aviation, Oil&Gas, Asset Management, etc.).
-                    </p>
-                </div>
-            </div>
-        </div>  
+
     </div>
 
 

@@ -1,8 +1,10 @@
-
+@extends('layouts.model')
+@section('title','LP MIEF')
+@section('content')
 
 <body class="font-medium" style="font-family: Poppins; color:#606C38; background-color: #F5F5F5">
 
-    @include('layouts.model')
+    
     <!-- LP MIEF -->
     <section class="container w-1/2 mx-auto mt-8">
         <h3>LP MIEF</h3>
