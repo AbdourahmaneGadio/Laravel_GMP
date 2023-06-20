@@ -101,7 +101,22 @@
         <!-- Mentions légales -->
     </section>
     <!-- Section du copyright -->
-
+    <script>
+        // Récupérer les éléments des boutons et des menus
+        const creationButton = document.getElementById('creationButton');
+        const creationMenu = document.getElementById('creationMenu');
+        const utilisateurButton = document.getElementById('utilisateurButton');
+        const utilisateurMenu = document.getElementById('utilisateurMenu');
+      
+        // Ajouter des gestionnaires d'événements aux boutons
+        creationButton.addEventListener('click', () => {
+          creationMenu.classList.toggle('hidden');
+        });
+      
+        utilisateurButton.addEventListener('click', () => {
+          utilisateurMenu.classList.toggle('hidden');
+        });
+      </script>
 </footer>
 <!-- Footer -->
 
