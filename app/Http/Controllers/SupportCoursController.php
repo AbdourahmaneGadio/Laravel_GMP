@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cour;
-use App\Models\File;
 
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class SupportCoursController extends Controller
 {
@@ -28,11 +28,17 @@ class SupportCoursController extends Controller
      */
     public function create(Request $request)
     {
-      
-            //  Store data in database
-            Cour::create($request->all());
-            return back()->with('success', 'Your form has been submitted.');
-        
+        // Ajout du fichier sur le serveur
+        $file = $request->file('pdf');
+        // $fileName = $request->$file->getClientOriginalName();
+        $fileName = 'fichierTest.pdf';
+        $filePath = 'uploads/' . $fileName; // storage/app/public/uploads/
+
+        Storage::disk('public')->put($filePath, file_get_contents($file));
+
+        //  Store data in database
+        Cour::create($request->all());
+        return back()->with('success', 'Your form has been submitted.');
     }
 
     // /**

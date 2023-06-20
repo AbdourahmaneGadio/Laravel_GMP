@@ -5,6 +5,7 @@ use App\Http\Controllers\NoteController;
 use App\Http\Controllers\SupportCours;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EntrepriseController;
+use App\Http\Controllers\MesNotesController;
 use App\Http\Controllers\projetController;
 use App\Http\Controllers\SupportCoursController;
 use Illuminate\Routing\RouteRegistrar;
@@ -41,9 +42,7 @@ Route::get('/edt', function () {
     return view('profile.profils-Eetudiant.edt');
 });
 
-Route::get('/Mesnotes', function () {
-    return view('profile.profils-Eetudiant.Mesnotes');
-});
+
 Route::get('/offresAlterance', function () {
     return view('profile.profils-Eetudiant.offresAlterance');
 });
@@ -126,9 +125,7 @@ Route::get('/edt', function () {
 //     return view('profile.profils-Eetudiant.MesPT');
 // });
 
-Route::get('/Mesnotes', function () {
-    return view('profile.profils-Eetudiant.Mesnotes');
-});
+Route::get('/Mesnotes',[MesNotesController::class, 'index'])->name('Mesnotes.show');
 
 Route::get('/Mescandidatures', function () {
     return view('profile.profils-Eetudiant.Mescandidatures');

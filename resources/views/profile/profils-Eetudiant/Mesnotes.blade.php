@@ -1,65 +1,55 @@
-
 @extends('layouts.model')
 @section('title','Mes notes')
 @section('content')
 
-    <ul class="listLien">
-        <li>ACCUEIL </li>
-        <li> > </li>
-        <li>ESPACE ETUDIANT </li>
-        <li> > </li>
-        <li>MESNOTES</li>
-    </ul>
+<ul class="listLien">
+    <li>ACCUEIL </li>
+    <li> > </li>
+    <li>ESPACE ETUDIANT </li>
+    <li> > </li>
+    <li>MESNOTES</li>
+</ul>
 
-    <section id="section">
-
-
-
-        @include('layouts.sidebarEtud')
-        <div class="container w-2/3 mx-auto my-4">
-            <label>Choisir le semestre</label>
-
-            <select style="   border: none;background: #80808040;width: 20%;" class="semestrechoice">
-                <option>S1</option>
-                <option>S2</option>
-            </select>
-            <br>
-            <br>
-
-            <table>
-
-                <tr>
-                    <th scope="col">mathématique</th>
-                    <th scope="col">Physique</th>
-                    <th scope="col">Traveaux Pratique</th>
-                    <th scope="col">Traveaux Pratique</th>
-                </tr>
-                <tr>
-
-                    <td>7</td>
-                    <td>7</td>
-                    <td>4,569</td>
-                    <td>6,219</td>
-                </tr>
-                <tr>
-
-                    <td>7</td>
-                    <td>7</td>
-                    <td>7,223</td>
-                    <td>6,219</td>
-                </tr>
-                <tr>
-                    <td scope="row">Mia Oolong</td>
-                    <td>9</td>
-                    <td>6,219</td>
-                    <td>6,219</td>
-                </tr>
-
-            </table>
+<section id="section">
 
 
 
-        </div>
+    @include('layouts.sidebarEtud')
+    <div class="container w-2/3 mx-auto my-4">
+        <label>Choisir le semestre</label>
+
+        <select style="   border: none;background: #80808040;width: 20%;" class="semestrechoice">
+            <option>S1</option>
+            <option>S2</option>
+        </select>
+        <br>
+        <br>
+
+        <table>
+            <tr>
+                <th scope="col">Matière</th>
+                <th scope="col">Note</th>
+            </tr>
+            @foreach ($notes as $noteActuelle)
+
+            <tr>
+                                <!-- Id matière -->
+
+                <td>{{$noteActuelle->fk_note_matiere_id}}</td>
+             
+                <!-- Valeur note -->
+                <td>{{$noteActuelle->note}}</td>
+
+            </tr>
+            @endforeach
+
+
+
+        </table>
+
+
+
+    </div>
 
 
 
@@ -69,7 +59,7 @@
 
 
 
-    </section>
+</section>
 
 
 
@@ -105,7 +95,7 @@
 
 
     }
-    
+
     td {
         border: 1px solid grey;
         padding: 17px;
@@ -117,7 +107,7 @@
         padding: 17px;
     }
 
-  
+
 
     .lienFormation h2 {
         color: white;

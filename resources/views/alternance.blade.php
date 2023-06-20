@@ -6,7 +6,10 @@
 <section id="section">
 
 @include('layouts.sidebarEntre')
+
+
 <div class="Ajoutoffre">
+  
     <h2 class="text-center">Ajouter une offre d'alternance</h2>
 
     @if(auth()->check() && auth()->user()->fk_role_id === 6)
@@ -57,7 +60,10 @@
             <label for="alternance_date_debut" class="block mb-1">Date de début</label>
             <input type="date" name="alternance_date_debut" id="alternance_date_debut" value="{{ old('alternance_date_debut') }}" required class="w-full px-3 py-2 border rounded">
             @error('alternance_date_debut')
-                <span class="text-red-500">{{ $message }}</span>
+            <p class="paragraph">Chère entreprise,
+
+Nous sommes ravis de vous informer que vous pouvez déposer une offre d'alternance en remplissant simplement le formulaire ci-dessous. Cette opportunité vous permettra de former des étudiants motivés tout en bénéficiant de leurs compétences. Nous sommes impatients de travailler avec vous dans le cadre de cette collaboration précieuse.</p>
+          <span class="text-red-500">{{ $message }}</span>
             @enderror
         </div>
     
@@ -116,6 +122,14 @@
 </section>
 
 <style>
+
+    .paragraph {
+  font-family: Poppins;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
 /*FORM*/ 
     .Ajoutoffre {
     background-color: #f2f2f2;
@@ -167,7 +181,7 @@
         min-height: 1vw;
         height: 100%;
         DISPLAY: flex;
-
+      
 
     }
 
