@@ -28,7 +28,9 @@ Route::get('/formation', function () {
     return view('licencesPro.lpMie');
 });
 
-
+Route::get('/mentionslegales', function () {
+    return view('mentionslegales');
+});
 
 
 Route::get('/gmp', function () {
