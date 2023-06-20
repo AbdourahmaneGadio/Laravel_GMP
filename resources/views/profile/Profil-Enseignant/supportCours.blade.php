@@ -57,7 +57,9 @@
         <option value="{{$matiere->matiere_id}}">{{$matiere->matiere_nom}}</option>
         @endforeach
       </select>
-      <input type="hidden" name="cours_nom" id="cours_nom"></input>
+      <input type="hidden" name="cours_nom" id="cours_nom" />
+      <input type="hidden" name="cours_pdf" id="cours_pdf" value="test.pdf" />
+
 
       <br><br>
 
