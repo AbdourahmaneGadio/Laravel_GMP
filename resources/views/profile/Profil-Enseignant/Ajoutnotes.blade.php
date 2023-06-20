@@ -48,7 +48,7 @@
       </div>
 
       <br><br>
-      <input type="hidden" name="id_enseignant" value="{{auth()->id();}}">
+      <input type="hidden" name="id_enseignant" value="{{auth()->id()}}">
 
       <select name="fk_note_etudiant_id" id="etudiant" required>
         <option value="" selected>Etudiant</option>
@@ -80,7 +80,7 @@
 
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
 </script>
-<script>
+<!-- <script>
   jQuery(document).ready(function() {
     jQuery('.choixClasse').click(function(e) {
       var $idClasseChoisie = $(this).val();
@@ -114,7 +114,7 @@
       });
     });
   });
-</script>
+</script> -->
 
 
 
