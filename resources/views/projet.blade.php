@@ -6,7 +6,7 @@
 @include('layouts.sidebarEntre')
 
 <div class="Ajoutprojet">
-    <h2 class="text-center">Ajouter un projet tutorés</h2>
+    <h2 class="text-center">Ajouter un projet tutoré</h2>
    
 
    
@@ -23,7 +23,7 @@
         </div>
     
         <div class="mb-4">
-            <label for="alternance_date_fin" class="block mb-1">description</label>
+            <label for="alternance_date_fin" class="block mb-1">Description</label>
             <textarea type="date" name="detail" id="detail" value="detail" required class="w-full px-3 py-2 border rounded"></textarea>
             @error('description')
                 <span class="text-red-500">{{ $message }}</span>
