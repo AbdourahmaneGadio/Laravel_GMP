@@ -115,6 +115,7 @@ Route::get('/MesPT', [projetController::class, 'index'])->name('MesPT.store');
 Route::get('/projet', function (){
     return view('projet');
 });
+Route::post('/projet', [projetController::class, 'store'])->name('projet.store');
 
 /*Espace etudiant */
 
