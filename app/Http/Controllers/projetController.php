@@ -13,6 +13,13 @@ class projetController extends Controller
 
 
 {
+    public function index()
+    {
+        $projets = Projet::all(); // Récupère toutes les instances de Alternance
+
+        return view('profile.profils-Eetudiant.MesPT', compact('projets'));
+    }
+
 
     public function store(Request $request)
     {
@@ -32,18 +39,18 @@ class projetController extends Controller
             $projet->projet_nom = $entreprise->entreprise_nom;
             $projet->detail = $request->detail;
             $projet->updated_at = $request->alternance_detail;
-        
+
 
             $projet->fk_projet_user_id = $user_id;
         } else {
             // Validez les données reçues depuis le formulaire
             $request->validate([
-                
+
                 'projet_nom' => 'required|string',
                 'detail' => 'required|string',
                 'updated_at' => 'required|date',
                 'created_at' => 'required|date',
-             
+
             ]);
             $projet = new Projet;
             $projet->projet_nom = $request->projet_nom;
