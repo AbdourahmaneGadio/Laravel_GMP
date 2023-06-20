@@ -78,7 +78,7 @@ Route::get('/licencesPro', function () {
     return view('licencesPro');
 });
 
-Route::get('/lp-mief', function () {
+Route::get('/lpMief', function () {
     return view('licencesPro.lpMief');
 });
 

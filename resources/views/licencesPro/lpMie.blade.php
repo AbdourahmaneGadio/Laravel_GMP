@@ -1,4 +1,4 @@
-@include('layouts.header')
+@include('layouts.model')
     <!-- LP MRI -->
     <section class="container w-1/2 mx-auto mt-8">
         <h3>Présentation</h3>
